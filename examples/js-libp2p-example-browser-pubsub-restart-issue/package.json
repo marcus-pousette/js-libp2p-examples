@@ -1,0 +1,40 @@
+{
+  "name": "@libp2p/example-browser-pubsub-restart-issue",
+  "version": "1.0.0",
+  "description": "How to use libp2p pubsub in browsers",
+  "license": "Apache-2.0 OR MIT",
+  "homepage": "https://github.com/libp2p/js-libp2p-example-browser-pubsub#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/libp2p/js-libp2p-examples.git"
+  },
+  "bugs": {
+    "url": "https://github.com/libp2p/js-libp2p-examples/issues"
+  },
+  "type": "module",
+  "scripts": {
+    "start": "vite",
+    "build": "vite build",
+    "relay": "node relay.js",
+    "test:firefox": "npm run build && playwright test --browser=firefox test",
+    "test:chrome": "npm run build && playwright test test",
+    "test": "npm run build && test-browser-example test"
+  },
+  "dependencies": {
+    "@chainsafe/libp2p-gossipsub": "^13",
+    "@chainsafe/libp2p-noise": "^15",
+    "@chainsafe/libp2p-yamux": "^6",
+    "@libp2p/circuit-relay-v2": "^1",
+    "@libp2p/dcutr": "^1",
+    "@libp2p/identify": "^2",
+    "@libp2p/mplex": "^10",
+    "@libp2p/webrtc": "^4",
+    "@libp2p/websockets": "^8",
+    "@multiformats/multiaddr": "^12",
+    "libp2p": "^1",
+    "vite": "^5.3.1"
+  },
+  "devDependencies": {
+    "test-ipfs-example": "^1.0.0"
+  }
+}
